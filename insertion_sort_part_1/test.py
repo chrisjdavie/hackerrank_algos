@@ -4,8 +4,8 @@ from .run import run
 
 class TestSort(unittest.TestCase):
     
-    def check_output(self, input_arr, sample_output):       
-        actual_output = run(input_arr)
+    def check_output(self, input_arr, sample_output):
+        actual_output = list(run(input_arr))
         
         self.assertSequenceEqual(sample_output,
                                  actual_output)
@@ -47,3 +47,5 @@ class TestSort(unittest.TestCase):
                           [ 1, 2 ] ]
         self.check_output(input_arr, sample_output)
 
+if __name__ == "__main__":
+    unittest.main()
